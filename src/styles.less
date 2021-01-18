@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: "Nunito", "sans-serif";
+  font-size: 18px;
+  background:	#303030;
+  color: white;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Header */
+header {
+  background: crimson;
+  padding: 1em 0;
+  a {
+    color: white;
+    text-decoration: none;
+    .logo {
+      font-weight: bold;
+
+    }
+  }
+  nav {
+    float: right;
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      display: flex;
+    }
+
+    li {
+      &hover {
+        color: darkcyan;
+        background: crimson;
+      }
+      a {
+        padding: 1em;
+        &hover {
+          color: darkcyan;
+          background: crimson;
+        }
+      }
+    }
+  }
+}
