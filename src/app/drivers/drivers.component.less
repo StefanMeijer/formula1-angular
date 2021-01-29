@@ -1,0 +1,21 @@
+.card {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  color: black;
+  margin-bottom: 1%;
+  img {
+    opacity: 0.6;
+  }
+  &:hover {
+    background-color: #272a2e !important;
+    top: -10px;
+    img {
+      opacity: 1;
+      position: relative;
+      transition: transform 0.5;
+      transform: scale(1.1);
+      top: -5px;
+    }
+  }
+}

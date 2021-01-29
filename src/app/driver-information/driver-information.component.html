@@ -1,0 +1,128 @@
+<div class="d-flex justify-content-center" *ngIf="driverInfo; else elseBlock">
+  <div class="d-flex flex-row">
+    <div class="p-2">
+      <div class="driverinfo border-danger">
+        <div class="photo">
+          <img
+            src="{{ driverInfo.photo }}"
+            alt="{{ driverInfo.givenName }}"
+            style="width: 250px"
+          />
+        </div>
+        <hr style="border: 1px solid black" />
+        <div class="information">
+          <p class="text-center">
+            {{ driverInfo.givenName + " " + driverInfo.familyName }}
+          </p>
+        </div>
+        <div class="nationaliteit">
+          <div class="d-flex flex-row" style="justify-content: center">
+            <div class="p-2">{{ driverInfo.permanentNumber }}</div>
+            <div class="p-2" [ngSwitch]="driverInfo.nationality">
+              <img
+                *ngSwitchCase="'British'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/lewis-hamilton/_jcr_content/countryFlag.img.jpg/1536080051510.jpg"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Thai'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/alexander-albon/_jcr_content/countryFlag.img.png/1544692495802.png"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Finnish'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/valtteri-bottas/_jcr_content/countryFlag.img.gif/1423762801690.gif"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Brazilian'"
+                src=""
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'French'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/pierre-gasly/_jcr_content/countryFlag.img.gif/1423762801429.gif"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Italian'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/antonio-giovinazzi/_jcr_content/countryFlag.img.jpg/1422627085189.jpg"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'German'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/sebastian-vettel/_jcr_content/countryFlag.img.jpg/1422627083826.jpg"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Russian'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/daniil-kvyat/_jcr_content/countryFlag.img.jpg/1422627086003.jpg"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Canadian'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/lance-stroll/_jcr_content/countryFlag.img.jpg/1422627083354.jpg"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Monegasque'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/charles-leclerc/_jcr_content/countryFlag.img.jpg/1422627085995.jpg"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Danish'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/kevin-magnussen/_jcr_content/countryFlag.img.jpg/1426177193193.jpg"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Mexican'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/sergio-perez/_jcr_content/countryFlag.img.gif/1423762801900.gif"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Australian'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/daniel-ricciardo/_jcr_content/countryFlag.img.jpg/1422627081354.jpg"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Spanish'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/carlos-sainz/_jcr_content/countryFlag.img.jpg/1422627086043.jpg"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+              <img
+                *ngSwitchCase="'Dutch'"
+                src="https://www.formula1.com/content/fom-website/en/drivers/max-verstappen/_jcr_content/countryFlag.img.gif/1423744085850.gif"
+                alt="{{ driverInfo.givenName }}"
+                style="width: 30px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-2">
+    <div class="driverExtraInfo">
+      <h3 class="text-center">Biografie</h3>
+      <p style="width: 200px">{{ driverInfo.desc }}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #elseBlock>
+  <app-page-not-found></app-page-not-found>
+</ng-template>
