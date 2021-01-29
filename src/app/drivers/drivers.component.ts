@@ -9,13 +9,12 @@ import { HttpService } from '../http.service';
 export class DriversComponent implements OnInit {
 
   private drivers: Array<Object>;
-  private driverName: Array<Object>;
 
   constructor(private http: HttpService) { }
 
   ngOnInit(): void {
     this.http.get(HttpService.DRIVERS_URL).subscribe((result:any) => {
-      this.setDrivers(result.MRData.DriverTable.Drivers);
+    this.setDrivers(result.MRData.DriverTable.Drivers);
 
       console.log(result.MRData);
     });

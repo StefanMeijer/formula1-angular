@@ -6,6 +6,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DriversComponent } from './drivers/drivers.component';
+import { DriverInformationComponent } from './driver-information/driver-information.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { DriversComponent } from './drivers/drivers.component';
     AppComponent,
     routingComponents,
     PageNotFoundComponent,
-    DriversComponent
+    DriversComponent,
+    DriverInformationComponent
   ],
   imports: [
     BrowserModule,
